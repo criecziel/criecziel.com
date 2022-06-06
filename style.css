@@ -17,7 +17,7 @@ body {
 }
 
 a {
-  color: #d5df9f;
+  color: #dadf9f;
   text-decoration: none;
 }
 
@@ -26,8 +26,12 @@ a:hover {
 }
 
 .separator {
-  height: 150px;
-  width: 100%;
+  height: 80px;
+  width: 80px;
+  margin: 80px auto;
+  background-image: url("./images/logo.png");
+  background-size: 100%;
+  opacity: .3;
 }
 
 #description {
@@ -41,10 +45,9 @@ a:hover {
 }
 
 .header-section {
-  width: 1000px;
-  max-width: 100%;
+  width: 100%;
   height: 256px;
-  margin: 12px auto 12px auto;
+  margin: 12px 0;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,10 +62,16 @@ a:hover {
 
 .header-section .header-img {
   max-height: 100%;
-  max-width: 100vw;
   -o-object-fit: cover;
      object-fit: cover;
-  position: absolute;
+}
+
+.sub-header {
+  font-weight: normal;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+  color: #c9c9c9;
 }
 
 .section-title {
@@ -77,8 +86,8 @@ a:hover {
   margin-right: auto;
   padding: 0px;
   border-bottom: 2px solid white;
-  -o-border-image: repeating-linear-gradient(90deg, transparent, #8c936c 40%, #c9c9c9, #8c936c 60%, transparent) 2;
-     border-image: repeating-linear-gradient(90deg, transparent, #8c936c 40%, #c9c9c9, #8c936c 60%, transparent) 2;
+  -o-border-image: repeating-linear-gradient(90deg, transparent, #8f936c 40%, #c9c9c9, #8f936c 60%, transparent) 2;
+     border-image: repeating-linear-gradient(90deg, transparent, #8f936c 40%, #c9c9c9, #8f936c 60%, transparent) 2;
   -webkit-transform: perspective(100px) rotateX(15deg);
           transform: perspective(100px) rotateX(15deg);
 }
@@ -140,6 +149,7 @@ a:hover {
 /*------ Album list ------*/
 .list-albums {
   padding: 12px 0;
+  margin: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,6 +162,13 @@ a:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  border: 4px solid #000;
+  -o-border-image: url("images/border.png") 17 repeat;
+     border-image: url("images/border.png") 17 repeat;
+  border-image-outset: 0;
+  border-image-slice: 17;
+  border-top-width: 17px;
+  background: #1c1c17;
 }
 
 .list-albums .item-album {
@@ -180,6 +197,7 @@ a:hover {
           order: 2;
   position: relative;
   width: 100%;
+  max-height: 250px;
   aspect-ratio: 1;
 }
 
@@ -226,7 +244,7 @@ a:hover {
   border-image-outset: 0;
   border-image-slice: 17;
   border-width: 0 0 4px 0;
-  color: #a7ad85;
+  color: #aaad85;
   color: #aaa;
   text-shadow: 1px 1px 1px #000;
   font-weight: bold;
@@ -270,7 +288,8 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   color: #f4f4f4;
-  color: #a7ad85;
+  color: #aaad85;
+  color: #b3b87a;
   opacity: .8;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -286,12 +305,18 @@ a:hover {
   font-size: 2rem;
 }
 
-/*------ Downloads section ------*/
-.downloads-section {
-  padding: 30px;
+/*------ Links ------*/
+.links-section {
+  margin: 0 30px;
+  border: 4px solid #000;
+  -o-border-image: url("images/border.png") 17 repeat;
+     border-image: url("images/border.png") 17 repeat;
+  border-image-outset: 0;
+  border-image-slice: 17;
+  border-top-width: 0;
 }
 
-.downloads-section .link-list {
+.links-section .link-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,9 +330,9 @@ a:hover {
   width: 100%;
 }
 
-.downloads-section .link-list .link-item {
+.links-section .link-list .link-item {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  padding: 5px;
+  padding: 8px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -323,45 +348,50 @@ a:hover {
       flex-wrap: wrap;
 }
 
-.downloads-section .link-list .link-item:nth-child(odd) {
-  background: #fff2;
+.links-section .link-list .link-item:nth-child(odd) {
+  background: #ffffff28;
 }
 
-.downloads-section .link-list .link-item:nth-child(even) {
-  background: #fff3;
+.links-section .link-list .link-item:nth-child(even) {
+  background: #ffffff20;
 }
 
-.downloads-section .link-list .link-item .link {
+.links-section .link-list .link-item .link {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   text-decoration: underline;
   max-width: 100%;
+  color: #f4f4f4;
 }
 
-.downloads-section .link-list .link-item .description {
+.links-section .link-list .link-item .link:hover {
+  color: #b3b87a;
+}
+
+.links-section .link-list .link-item .description {
   opacity: .8;
   max-width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
 
-/*------ Contact section ------*/
+/*------ Contact ------*/
 .contact-section {
-  padding: 24px;
   width: 100%;
+  padding: 0 30px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.contact-section .sign {
-  text-align: center;
-  font-size: 1.2rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
 .contact-section .contact-link-list {
+  width: 100%;
+  padding: 5px 0;
   max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -374,6 +404,14 @@ a:hover {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background: #222;
+  border: 4px solid #000;
+  -o-border-image: url("images/border.png") 17 repeat;
+     border-image: url("images/border.png") 17 repeat;
+  border-image-outset: 0;
+  border-image-slice: 17;
+  border-top-width: 17px;
+  border-bottom-width: 0;
 }
 
 .contact-section .contact-link-list .sign {
@@ -384,6 +422,10 @@ a:hover {
   margin-top: 16px;
 }
 
+.contact-section .contact-link-list .wrap {
+  width: 100%;
+}
+
 .contact-section .contact-link-list .item-contact-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -391,8 +433,9 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #c9c9c9;
   max-width: 100%;
+  margin: 4px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .contact-section .contact-link-list .item-contact-link * {
@@ -405,19 +448,24 @@ a:hover {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 4px 8px;
 }
 
 .contact-section .contact-link-list .item-contact-link i {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
+  padding-right: 8px;
+}
+
+.contact-section .contact-link-list .item-contact-link span {
+  font-size: 1.2rem;
+  color: #c9c9c9;
 }
 
 .contact-section .contact-link-list .item-contact-link[href] {
-  color: #a7ad85;
+  color: #b3b87a;
 }
 
 .contact-section .contact-link-list .item-contact-link[href]:hover {
-  color: #c9c9c9;
+  color: #f4f4f4;
 }
 
 footer {
@@ -454,13 +502,14 @@ footer .footer-logo {
 }
 
 @media only screen and (max-width: 768px) {
-  .downloads-section .link-item {
+  .links-section .link-item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 15px 5px !important;
   }
-  .downloads-section .description {
+  .links-section .description {
     max-width: 100% !important;
   }
 }
