@@ -12,7 +12,7 @@ body {
   color: #e9e9e9;
   position: relative;
   background-color: #333;
-  background-image: url("./images/background.png");
+  background-image: url("./images/background.jpg");
   background-blend-mode: overlay;
 }
 
@@ -61,6 +61,7 @@ a:hover {
 }
 
 .header-section .header-img {
+  max-width: 100%;
   max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -458,6 +459,7 @@ a:hover {
 .contact-section .contact-link-list .item-contact-link span {
   font-size: 1.2rem;
   color: #c9c9c9;
+  word-break: break-all;
 }
 
 .contact-section .contact-link-list .item-contact-link[href] {
