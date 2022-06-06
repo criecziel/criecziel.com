@@ -81,7 +81,7 @@ a {
 
 .header-section {
     width: $content-width;
-    max-width: 100vw;
+    max-width: 100%;
     height: 256px;
     margin: 12px auto 12px auto;
     position: relative;
@@ -101,7 +101,7 @@ a {
     &::after  { content: ' ·' }
     &::before { content: '· '; }
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 2.1rem;
     font-weight: normal;
     color: #c9c9c9;
     width: max-content;
@@ -261,7 +261,9 @@ a {
 
             display: flex;
             justify-content: space-between;
+            justify-items: center;
             align-items: flex-start;
+            flex-wrap: wrap;
 
             &:nth-child(odd) {
                 background: #fff2;
@@ -273,6 +275,7 @@ a {
             .link {
                 width: max-content;
                 text-decoration: underline;
+                max-width: 100%;
             }
             .description {
                 opacity: .8;
@@ -286,7 +289,7 @@ a {
 /*------ Contact section ------*/
 .contact-section {
     padding: 24px;
-    width: max-content;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 
@@ -297,9 +300,11 @@ a {
     }
 
     .contact-link-list {
+        max-width: 100%;
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        flex-wrap: wrap;
 
         .sign {
             width: 100%;
@@ -311,6 +316,8 @@ a {
             display: flex;
             align-items: center;
             color: #c9c9c9;
+            max-width: 100%;
+
             * {
                 display: flex;
                 justify-content: flex-start;
@@ -320,10 +327,13 @@ a {
             i {
                 font-size: 2.5rem;
             }
-        }
 
-        a:hover {
-            color: hsl($accent-hue, 20%, 60%);
+            &[href] {
+                color: hsl($accent-hue, 20%, 60%);
+            }
+            &[href]:hover {
+                color: #c9c9c9;
+            }
         }
     }
 }
@@ -333,6 +343,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
     a {
         display: inline;
@@ -346,5 +357,17 @@ footer {
         width: 150px;
         margin: 50px 0;
         opacity: .5;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .downloads-section {
+        .link-item {
+            flex-direction: column;
+        }
+        .description {
+            max-width: 100% !important;
+        }
     }
 }
