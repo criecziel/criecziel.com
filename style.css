@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -71,13 +70,16 @@ a:hover {
   font-weight: normal;
   font-style: italic;
   width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.8rem;
   text-align: center;
   color: #c9c9c9;
 }
 
 .section-title {
   text-transform: uppercase;
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: normal;
   color: #c9c9c9;
   width: -webkit-max-content;
@@ -89,20 +91,10 @@ a:hover {
   border-bottom: 2px solid white;
   -o-border-image: repeating-linear-gradient(90deg, transparent, #8f936c 40%, #c9c9c9, #8f936c 60%, transparent) 2;
      border-image: repeating-linear-gradient(90deg, transparent, #8f936c 40%, #c9c9c9, #8f936c 60%, transparent) 2;
-  -webkit-transform: perspective(100px) rotateX(15deg);
-          transform: perspective(100px) rotateX(15deg);
-}
-
-.section-title::after {
-  content: ' ·';
-}
-
-.section-title::before {
-  content: '· ';
 }
 
 .main-section {
-  background: #111;
+  background: #0008;
   border: 8px solid #000;
   -o-border-image: url("images/border.png") 17 repeat;
      border-image: url("images/border.png") 17 repeat;
@@ -452,7 +444,7 @@ a:hover {
 }
 
 .contact-section .contact-link-list .item-contact-link i {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   padding-right: 8px;
 }
 
@@ -468,6 +460,36 @@ a:hover {
 
 .contact-section .contact-link-list .item-contact-link[href]:hover {
   color: #f4f4f4;
+}
+
+.listen-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 30px;
+}
+
+.listen-section iframe {
+  background: #222;
+  width: 600px;
+  height: 50px;
+  margin: 5px;
+  border-bottom: 2px solid white;
+  -o-border-image: repeating-linear-gradient(0deg, transparent, #8f936c 40%, #c9c9c9, #8f936c 60%, transparent) 2;
+     border-image: repeating-linear-gradient(0deg, transparent, #8f936c 40%, #c9c9c9, #8f936c 60%, transparent) 2;
+  border-width: 1px;
 }
 
 footer {
