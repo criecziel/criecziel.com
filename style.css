@@ -239,12 +239,55 @@ nav .nav-button {
   width: -moz-max-content;
   width: max-content;
   max-width: 100%;
+  position: relative;
 }
 
 .intro-box .horizontal-link-list .item-contact-link {
   height: 30px;
   width: 30px;
   margin: 20px 15px;
+}
+
+.intro-box .horizontal-link-list::before {
+  content: attr(data-label);
+  font-size: 1.3rem;
+  font-style: italic;
+  text-decoration: underline;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #b3b87a;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .2s linear opacity,visibility;
+  transition: .2s linear opacity,visibility;
+  opacity: 1;
+}
+
+.intro-box .horizontal-link-list * {
+  opacity: 0;
+  -webkit-transition: .2s linear opacity,visibility;
+  transition: .2s linear opacity,visibility;
+}
+
+.intro-box .horizontal-link-list:hover::before {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.intro-box .horizontal-link-list:hover * {
+  opacity: 1;
 }
 
 /*------ Album list ------*/
