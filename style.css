@@ -273,21 +273,24 @@ nav .nav-button {
   -webkit-transition: .2s linear opacity,visibility;
   transition: .2s linear opacity,visibility;
   opacity: 1;
+  cursor: pointer;
 }
 
 .intro-box .horizontal-link-list * {
   opacity: 0;
   -webkit-transition: .2s linear opacity,visibility;
   transition: .2s linear opacity,visibility;
+  pointer-events: none;
 }
 
-.intro-box .horizontal-link-list:hover::before {
+.intro-box .horizontal-link-list:focus::before {
   opacity: 0;
   pointer-events: none;
 }
 
-.intro-box .horizontal-link-list:hover * {
+.intro-box .horizontal-link-list:focus * {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /*------ Album list ------*/

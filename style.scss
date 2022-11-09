@@ -251,19 +251,22 @@ nav {
             align-items: center;
             transition: .2s linear opacity,visibility;
             opacity: 1;
+            cursor: pointer;
         }
         & * {
             opacity: 0;
             transition: .2s linear opacity,visibility;
+            pointer-events: none;
         }
 
         // When hovering...
-        &:hover::before {
+        &:focus::before {
             opacity: 0;
             pointer-events: none;
         }
-        &:hover * {
+        &:focus * {
             opacity: 1;
+            pointer-events: auto;
         }
     }
 }
